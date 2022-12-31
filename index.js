@@ -4,8 +4,9 @@ let currentUser = "testName";
 const getMainDiv = document.querySelector("#main");
 
 function renderApp() {
-    renderLoginPage();
+    // renderLoginPage();
     // renderBookPage();
+    renderViewLikes();
 }
 
 function renderLoginPage() {
@@ -133,6 +134,7 @@ function renderBookPage() {
     
 
     //<---Event Listeners--->
+
     // on hover of image create tooltip 
     bookImg.addEventListener("mouseover", (e) => {
         toolDiv.classList.toggle("hidden");
@@ -148,6 +150,15 @@ function renderBookPage() {
         //post to current users likes in db.json
     })
 
+    //view likes button
+    viewLikesBtn.addEventListener("click", (e) => {
+        //remove html from previous page
+        getMainDiv.innerHTML = "";
+
+        //render view likes page
+        renderViewLikes();
+    })
+
     //append to main div for rendering
     getMainDiv.appendChild(topBar);
     getMainDiv.appendChild(bookDiv);
@@ -160,6 +171,33 @@ function renderViewLikes(){
     // <---render html for View Likes Page-->
     const topBar = document.createElement("div");
     const userH1 = document.createElement("h1");
+    const shopBtn = document.createElement("button");
+
+    const likesDiv = document.createElement("div");
+
+    // <---Top Bar-->
+    topBar.id = "topBar";
+    // append to topBar Div 
+    topBar.appendChild(userH1);
+    topBar.appendChild(shopBtn);
+    
+    userH1.innerText = currentUser;
+    shopBtn.textContent = "Return To Shopping";
+
+    // <---Display Liked Books-->
+    
+
+    //Create Logic for Displaying your likes stored in db.json
+
+    getMainDiv.appendChild(topBar);
+    getMainDiv.appendChild(likesDiv);
+
+    //<---Event Listeners-->
+    shopBtn.addEventListener("click", (e) => {
+        //remove previous pages html
+        getMainDiv.innerHTML = "";
+        renderBookPage();
+    })
 }
 
 
