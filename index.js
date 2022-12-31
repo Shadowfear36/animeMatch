@@ -4,8 +4,8 @@ let currentUser = "testName";
 const getMainDiv = document.querySelector("#main");
 
 function renderApp() {
-    // renderLoginPage();
-    renderBookPage();
+    renderLoginPage();
+    // renderBookPage();
 }
 
 function renderLoginPage() {
@@ -74,8 +74,8 @@ function renderLoginPage() {
             e.preventDefault();
 
             // post to database at db.json
-            // const userName = userNameInput.value;
-            // const password = passwordInput.value;
+            const userName = userNameInput.value;
+            const password = passwordInput.value;
            
             //set current user to current user input value
             currentUser = userName
@@ -114,11 +114,39 @@ function renderBookPage() {
     bookDiv.appendChild(dislikeBtn);
     bookDiv.appendChild(likeBtn);
 
-    bookImg.src = "";
+    //create logic to display books
+
+    bookImg.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
+    bookImg.id = "bookImg";
+
     dislikeBtn.textContent = "Dislike";
     likeBtn.textContent = "Like";
 
-    //append created items to Div
+    //<---Tool Tips -->
+    const toolDiv = document.createElement("div");
+    const toolText = document.createElement("h4");
+    toolText.innerHTML = "Click on the Book Cover For Details";
+    toolDiv.id = "toolDiv";
+    toolDiv.className = "hidden";
+    toolDiv.appendChild(toolText);
+    getMainDiv.appendChild(toolDiv);
+    
+
+    //<---Event Listeners--->
+    // on hover of image create tooltip 
+    bookImg.addEventListener("mouseover", (e) => {
+        toolDiv.classList.toggle("hidden");
+        console.log("mouseover");
+    })
+    bookImg.addEventListener("mouseout", (e) => {
+        toolDiv.classList.toggle("hidden");
+        console.log("mouseout");
+    })
+ 
+    // like button
+    likeBtn.addEventListener("click", (e) => {
+        //post to current users likes in db.json
+    })
 
     //append to main div for rendering
     getMainDiv.appendChild(topBar);

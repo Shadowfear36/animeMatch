@@ -8,3 +8,14 @@
     align-items: center;
     align-content: center;
 }
+.hidden{
+    display: none;
+}
+
+#main {
+    z-index: 0;
+}
+
+#toolDiv {
+    z-index: 1;
+}
