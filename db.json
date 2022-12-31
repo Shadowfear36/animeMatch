@@ -1,0 +1,17 @@
+{
+    "users": [
+        {   
+            "id": 0,
+            "userName": "testUser",
+            "password": "123",
+            "likes": [
+                {
+                    "id": 0,
+                    "bookTitle": "Book Title Example",
+                    "bookAuthor": "Author Example",
+                    "bookCover": "bookUrl.com/cover/example"
+                }
+            ]
+        }
+    ]
+}
