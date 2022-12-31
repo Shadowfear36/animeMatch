@@ -2,6 +2,9 @@
     text-align: center;
     margin-top: 15%;
 }
-.loginInput{
+.centered{
+    text-align: center;
     justify-content: center;
+    align-items: center;
+    align-content: center;
 }
