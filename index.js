@@ -1,7 +1,8 @@
 //render login page
-let currentUser = "testName";
-let currentUserId = 0;
+let currentUser;
+let currentUserId;
 let currentLikesArr;
+let currentAnimeId;
 
 const dbUrl = "http://localhost:3000/users/";
 
@@ -20,21 +21,21 @@ function renderLoginPage() {
         headerText.className = "loginHeader";
     
         //create login form
-        const loginForm = document.createElement("form");
+        const signUpForm = document.createElement("form");
         const userNameInput = document.createElement("input");
         const passwordInput = document.createElement("input");
         const loginBtn = document.createElement("button");
         const signUpBtn = document.createElement("button");
     
         //append inputs to login form
-        loginForm.appendChild(userNameInput);
-        loginForm.appendChild(passwordInput);
-        loginForm.appendChild(loginBtn);
-        // loginForm.appendChild(signUpBtn);
+        signUpForm.appendChild(userNameInput);
+        signUpForm.appendChild(passwordInput);
+        signUpForm.appendChild(signUpBtn);
+        // signUpForm.appendChild(signUpBtn);
     
         //form styles
-        loginForm.style.display = "block";
-        loginBtn.classList.add("centered");
+        signUpForm.style.display = "block";
+        signUpBtn.classList.add("centered");
     
         //user name input styles
         userNameInput.type = "text";
@@ -53,29 +54,29 @@ function renderLoginPage() {
         passwordInput.classList.add("centered");
     
         //login btn styles
-        loginBtn.textContent = "Login";
-        loginBtn.type = "submit";
-        loginBtn.id = "loginBtn";
-        loginBtn.name = "formBtn";
-        loginBtn.value = "Login";
-        loginBtn.style.display = "block";
-        loginBtn.classList.add("centered");
+        // loginBtn.textContent = "Login";
+        // loginBtn.type = "submit";
+        // loginBtn.id = "loginBtn";
+        // loginBtn.name = "formBtn";
+        // loginBtn.value = "Login";
+        // loginBtn.style.display = "block";
+        // loginBtn.classList.add("centered");
     
         //sign up btn styles
-        // signUpBtn.textContent = "Sign up";
-        // signUpBtn.type = "submit";
-        // signUpBtn.id = "signUpBtn";
-        // signUpBtn.name = "formBtn";
-        // signUpBtn.value = "SignUp";
-        // signUpBtn.style.display = "block";
-        // signUpBtn.classList.add("centered");
+        signUpBtn.textContent = "Sign up";
+        signUpBtn.type = "submit";
+        signUpBtn.id = "signUpBtn";
+        signUpBtn.name = "formBtn";
+        signUpBtn.value = "SignUp";
+        signUpBtn.style.display = "block";
+        signUpBtn.classList.add("centered");
     
         //append created items to Div
         getMainDiv.appendChild(headerText);
-        getMainDiv.appendChild(loginForm);
+        getMainDiv.appendChild(signUpForm);
     
         //<--EVENT LISTENERS-->
-        loginForm.addEventListener("submit", (e) => {
+        signUpForm.addEventListener("submit", (e) => {
             e.preventDefault();
 
             // post to database at db.json
@@ -106,6 +107,7 @@ function renderLoginPage() {
 
             //set current user to current user input value
             currentUser = userName
+            
             //render the anime page
             renderAnimePage();
         })
@@ -205,13 +207,13 @@ function renderAnimePage() {
             "releaseDate": animeReleaseDate.innerText,
             "animeCover": animeCover.src
         };
+
         // render new anime
         index++;
         fetchDataByIndex(index);
 
-        // grab currentLikes data
+        // grab currentLikes data and add the payLoad To it
         currentLikesArr.push(payLoad);
-        console.log(currentLikesArr);
 
         // patch current users likes in db.json
         fetch(dbUrl + currentUserId, {
@@ -279,7 +281,7 @@ function renderViewLikes(){
     topBar.appendChild(shopBtn);
     
     userH1.innerText = currentUser;
-    shopBtn.textContent = "Return To Shopping";
+    shopBtn.textContent = "Return To Like/Dislike";
 
     // <---Display Liked Animes-->
     fetch(dbUrl + currentUserId)
@@ -303,10 +305,8 @@ function renderViewLikes(){
         });
     })
     .catch(err => console.log(err));
-    
 
-    //Create Logic for Displaying your likes stored in db.json
-
+    //append created items to mainDiv
     getMainDiv.appendChild(topBar);
     getMainDiv.appendChild(likesDiv);
 

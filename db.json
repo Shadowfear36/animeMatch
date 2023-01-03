@@ -1,41 +1,4 @@
 {
   "users": [
-    {
-      "userName": "Dylan",
-      "password": "123",
-      "likes": [
-        {
-          "animeTitle": "Boruto: Naruto Next Generations",
-          "releaseDate": "2017",
-          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
-        },
-        {
-          "animeTitle": "NieR:Automata Ver1.1a",
-          "releaseDate": "2023",
-          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
-        },
-        {
-          "animeTitle": "Spy Kyoushitsu",
-          "releaseDate": "2023",
-          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
-        },
-        {
-          "animeTitle": "Spy Kyoushitsu",
-          "releaseDate": "2023",
-          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
-        },
-        {
-          "animeTitle": "Detective Conan",
-          "releaseDate": "1996",
-          "animeCover": "https://gogocdn.net/cover/detective-conan.png"
-        },
-        {
-          "animeTitle": "One Piece",
-          "releaseDate": "1999",
-          "animeCover": "https://gogocdn.net/images/anime/One-piece.jpg"
-        }
-      ],
-      "id": 1
-    }
   ]
 }
