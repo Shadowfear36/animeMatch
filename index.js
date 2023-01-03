@@ -4,15 +4,15 @@ let currentUser = "testName";
 const getMainDiv = document.querySelector("#main");
 
 function renderApp() {
-    // renderLoginPage();
-    // renderBookPage();
-    renderViewLikes();
+    renderLoginPage();
+    // renderSongPage();
+    // renderViewLikes();
 }
 
 function renderLoginPage() {
         //render logo/text
         const headerText = document.createElement("h1");
-        headerText.textContent = "bookMatch";
+        headerText.textContent = "songMatch";
         headerText.className = "loginHeader";
     
         //create login form
@@ -80,12 +80,12 @@ function renderLoginPage() {
            
             //set current user to current user input value
             currentUser = userName
-            //render the book page
-            renderBookPage();
+            //render the song page
+            renderSongPage();
         })
 }
 
-function renderBookPage() {
+function renderSongPage() {
     // remove html from previous page
     getMainDiv.innerHTML = "";
 
@@ -94,9 +94,9 @@ function renderBookPage() {
     const userH1 = document.createElement("h1");
     const viewLikesBtn = document.createElement("button");
 
-    //books
-    const bookDiv = document.createElement("div");
-    const bookImg = document.createElement("img");
+    //songs
+    const songDiv = document.createElement("div");
+    const songImg = document.createElement("img");
     const dislikeBtn = document.createElement("button");
     const likeBtn = document.createElement("button");
 
@@ -109,16 +109,16 @@ function renderBookPage() {
     userH1.innerText = currentUser;
     viewLikesBtn.textContent = "View Likes";
 
-    //<--Books App -->
-    bookDiv.id = "bookDiv";
-    bookDiv.appendChild(bookImg);
-    bookDiv.appendChild(dislikeBtn);
-    bookDiv.appendChild(likeBtn);
+    //<--Songs App -->
+    songDiv.id = "songDiv";
+    songDiv.appendChild(songImg);
+    songDiv.appendChild(dislikeBtn);
+    songDiv.appendChild(likeBtn);
 
-    //create logic to display books
+    //create logic to display songs
 
-    bookImg.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
-    bookImg.id = "bookImg";
+    songImg.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
+    songImg.id = "songImg";
 
     dislikeBtn.textContent = "Dislike";
     likeBtn.textContent = "Like";
@@ -126,21 +126,20 @@ function renderBookPage() {
     //<---Tool Tips -->
     const toolDiv = document.createElement("div");
     const toolText = document.createElement("h4");
-    toolText.innerHTML = "Click on the Book Cover For Details";
+    toolText.innerHTML = "Click on the Song For Play/Pause";
     toolDiv.id = "toolDiv";
     toolDiv.className = "hidden";
     toolDiv.appendChild(toolText);
     getMainDiv.appendChild(toolDiv);
-    
 
     //<---Event Listeners--->
 
     // on hover of image create tooltip 
-    bookImg.addEventListener("mouseover", (e) => {
+    songImg.addEventListener("mouseover", (e) => {
         toolDiv.classList.toggle("hidden");
         console.log("mouseover");
     })
-    bookImg.addEventListener("mouseout", (e) => {
+    songImg.addEventListener("mouseout", (e) => {
         toolDiv.classList.toggle("hidden");
         console.log("mouseout");
     })
@@ -161,7 +160,7 @@ function renderBookPage() {
 
     //append to main div for rendering
     getMainDiv.appendChild(topBar);
-    getMainDiv.appendChild(bookDiv);
+    getMainDiv.appendChild(songDiv);
 }
 
 function renderViewLikes(){
@@ -184,7 +183,7 @@ function renderViewLikes(){
     userH1.innerText = currentUser;
     shopBtn.textContent = "Return To Shopping";
 
-    // <---Display Liked Books-->
+    // <---Display Liked Songs-->
     
 
     //Create Logic for Displaying your likes stored in db.json
@@ -196,7 +195,7 @@ function renderViewLikes(){
     shopBtn.addEventListener("click", (e) => {
         //remove previous pages html
         getMainDiv.innerHTML = "";
-        renderBookPage();
+        renderSongPage();
     })
 }
 
