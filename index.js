@@ -1,6 +1,7 @@
 //render login page
 let currentUser = "testName";
 let currentUserId = 0;
+let currentLikesArr;
 
 const dbUrl = "http://localhost:3000/users/";
 
@@ -90,19 +91,25 @@ function renderLoginPage() {
                 body: JSON.stringify({
                     "userName": userName,
                     "password": password,
-                    "likes": ""
+                    "likes": []
                 })
             })
             .then(res => res.json())
+            .then(user => {
+                currentUserId = user.id
+                currentLikesArr = user.likes
+                console.log(currentLikesArr);
+                console.log(currentUserId);
+            })
             .catch(err => console.log(err));
 
             // set CurrentUserId
-            fetch(dbUrl)
-            .then(res => res.json())
-            .then(users => {
-                currentUserId = users.length - 1;
-                console.log(currentUserId)
-            })
+            // fetch(dbUrl)
+            // .then(res => res.json())
+            // .then(users => {
+            //     currentUserId = users.length - 1;
+            //     console.log(currentUserId)
+            // })
 
            
             //set current user to current user input value
@@ -132,6 +139,7 @@ function renderAnimePage() {
 
     // <---Top Bar-->
     topBar.id = "topBar";
+
     // append to topBar Div 
     topBar.appendChild(userH1);
     topBar.appendChild(viewLikesBtn);
@@ -149,9 +157,7 @@ function renderAnimePage() {
     animeDiv.style.display = "block";
     animeCover.style.display = "block";
 
-
-
-    //create logic to display Anime
+    //Logic to display Anime
 
     animeCover.src = "";
     animeCover.id = "animeCover";
@@ -201,18 +207,21 @@ function renderAnimePage() {
  
     // like button
     likeBtn.addEventListener("click", (e) => {
-        let currentLikesArr = [];
 
-        // grab currentLikes
-        fetch(dbUrl + 0)
-        .then(res => res.json())
-        .then(obj => { 
-            currentLikesArr.push(obj.likes)
-            console.log(currentLikesArr);
-        })
-        .catch(err => console.log(err))
+        let payLoad = {
+            "animeTitle": infoTitle.innerText,
+            "releaseDate": animeReleaseDate.innerText,
+            "animeCover": animeCover.src
+        };
+        // render new anime
+        index++;
+        fetchDataByIndex(index);
 
-        // post to current users likes in db.json
+        // grab currentLikes data
+        currentLikesArr.push(payLoad);
+        console.log(currentLikesArr);
+
+        // patch current users likes in db.json
         fetch(dbUrl + currentUserId, {
             method: "PATCH",
             headers: {
@@ -220,11 +229,7 @@ function renderAnimePage() {
                 Accept: "application/json",
             },
             body: JSON.stringify({
-                "likes" : [{
-                    "animeTitle": infoTitle.innerText,
-                    "releaseDate": animeReleaseDate.innerText,
-                    "animeCover": animeCover.src
-                }]
+                "likes" : currentLikesArr
             })
         })
         .then(res => res.json())
@@ -263,19 +268,6 @@ function renderAnimePage() {
     }
 
 }
-
-// function renderUserLikes(){
-//     fetch(dbUrl)
-//         .then(res => res.json())
-//         .then(obj => {
-//             console.log(obj[currentUserId].likes.forEach(e => {
-//                 console.log(e.songTitle)
-
-//             }))
-            
-//         })
-//         .catch(err => console.log(err));
-// }
 
 function renderViewLikes(){
     // remove html from previous page
