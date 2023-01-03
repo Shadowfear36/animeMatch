@@ -1,2 +1,2 @@
-# musicMatch
+# animeMatch
 Tinder For Anime
