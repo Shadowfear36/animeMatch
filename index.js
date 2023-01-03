@@ -1,11 +1,14 @@
 //render login page
 let currentUser = "testName";
+let currentUserId = 0;
+
+const dbUrl = "http://localhost:3000/users/";
 
 const getMainDiv = document.querySelector("#main");
 
 function renderApp() {
-    // renderLoginPage();
-    renderAnimePage();
+    renderLoginPage();
+    // renderAnimePage();
     // renderViewLikes();
 }
 
@@ -77,6 +80,30 @@ function renderLoginPage() {
             // post to database at db.json
             const userName = userNameInput.value;
             const password = passwordInput.value;
+
+            fetch(dbUrl, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    Accept: "application/json"
+                },
+                body: JSON.stringify({
+                    "userName": userName,
+                    "password": password,
+                    "likes": ""
+                })
+            })
+            .then(res => res.json())
+            .catch(err => console.log(err));
+
+            // set CurrentUserId
+            fetch(dbUrl)
+            .then(res => res.json())
+            .then(users => {
+                currentUserId = users.length - 1;
+                console.log(currentUserId)
+            })
+
            
             //set current user to current user input value
             currentUser = userName
@@ -126,16 +153,10 @@ function renderAnimePage() {
 
     //create logic to display Anime
 
-    animeCover.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
+    animeCover.src = "";
     animeCover.id = "animeCover";
 
-    fetch("https://gogoanime.consumet.org/popular")
-    .then((response) => response.json())
-    .then((animelist) => {
-        animeCover.src = animelist[index].animeImg;
-        infoTitle.innerText = animelist[index].animeTitle;
-        animeReleaseDate.innerText = animelist[index].releasedDate
-  });
+    fetchDataByIndex(index);
 
     dislikeBtn.textContent = "Dislike";
     likeBtn.textContent = "Like";
@@ -180,7 +201,40 @@ function renderAnimePage() {
  
     // like button
     likeBtn.addEventListener("click", (e) => {
-        //post to current users likes in db.json
+        let currentLikesArr = [];
+
+        // grab currentLikes
+        fetch(dbUrl + 0)
+        .then(res => res.json())
+        .then(obj => { 
+            currentLikesArr.push(obj.likes)
+            console.log(currentLikesArr);
+        })
+        .catch(err => console.log(err))
+
+        // post to current users likes in db.json
+        fetch(dbUrl + currentUserId, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify({
+                "likes" : [{
+                    "animeTitle": infoTitle.innerText,
+                    "releaseDate": animeReleaseDate.innerText,
+                    "animeCover": animeCover.src
+                }]
+            })
+        })
+        .then(res => res.json())
+        .catch(err => console.log(err));
+    })
+
+    // dislike button
+    dislikeBtn.addEventListener('click', (e) => {
+        index++;
+        fetchDataByIndex(index);
     })
 
     //view likes button
@@ -195,9 +249,33 @@ function renderAnimePage() {
     //append to main div for rendering
     getMainDiv.appendChild(topBar);
     getMainDiv.appendChild(animeDiv);
+
+      // create fetch function within to withold scope
+      function fetchDataByIndex(index) {
+        fetch("https://gogoanime.consumet.org/popular")
+        .then((response) => response.json())
+        .then((animelist) => {
+            animeCover.src = animelist[index].animeImg;
+            infoTitle.innerText = animelist[index].animeTitle;
+            animeReleaseDate.innerText = animelist[index].releasedDate
+      })
+      .catch(err => console.log(err));
+    }
+
 }
 
+// function renderUserLikes(){
+//     fetch(dbUrl)
+//         .then(res => res.json())
+//         .then(obj => {
+//             console.log(obj[currentUserId].likes.forEach(e => {
+//                 console.log(e.songTitle)
 
+//             }))
+            
+//         })
+//         .catch(err => console.log(err));
+// }
 
 function renderViewLikes(){
     // remove html from previous page
@@ -220,6 +298,7 @@ function renderViewLikes(){
     shopBtn.textContent = "Return To Shopping";
 
     // <---Display Liked Animes-->
+
     
 
     //Create Logic for Displaying your likes stored in db.json

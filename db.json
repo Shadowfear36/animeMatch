@@ -1,44 +1,29 @@
 {
-    "users": [
-        {   
-            "id": 0,
-            "userName": "testUser",
-            "password": "123",
-            "likes": [
-                {
-                    "id": 0,
-                    "songTitle": "Song Title Example 1",
-                    "songAuthor": "Author Example 1",
-                    "songCover": "SongUrl.com/cover/example"
-                }
-            ]
-        },
-        {   
-            "id": 1,
-            "userName": "testUser2",
-            "password": "123",
-            "likes": [
-                {
-                    "id": 0,
-                    "songTitle": "Song Title Example 1",
-                    "songAuthor": "Author Example 1",
-                    "songCover": "SongUrl.com/cover/example"
-                }
-            ]
-        },
-        {   
-            "id": 1,
-            "userName": "testUser3",
-            "password": "123",
-            "likes": [
-                {
-                    "id": 0,
-                    "songTitle": "Song Title Example 1",
-                    "songAuthor": "Author Example",
-                    "songCover": "SongUrl.com/cover/example"
-                }
-            ]
+  "users": [
+    {
+      "id": 0,
+      "userName": "testUser",
+      "password": "123",
+      "likes": [
+        {
+          "id": 0,
+          "animeTitle": "Song Title Example 1",
+          "releaseDate": "Author Example 1",
+          "animeCover": "SongUrl.com/cover/example"
         }
-
-    ]
+      ]
+    },
+    {
+      "userName": "tset",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }
