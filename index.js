@@ -96,6 +96,7 @@ function renderLoginPage() {
             })
             .then(res => res.json())
             .then(user => {
+                //set current User Id and 
                 currentUserId = user.id
                 currentLikesArr = user.likes
                 console.log(currentLikesArr);
@@ -103,15 +104,6 @@ function renderLoginPage() {
             })
             .catch(err => console.log(err));
 
-            // set CurrentUserId
-            // fetch(dbUrl)
-            // .then(res => res.json())
-            // .then(users => {
-            //     currentUserId = users.length - 1;
-            //     console.log(currentUserId)
-            // })
-
-           
             //set current user to current user input value
             currentUser = userName
             //render the anime page
@@ -290,7 +282,27 @@ function renderViewLikes(){
     shopBtn.textContent = "Return To Shopping";
 
     // <---Display Liked Animes-->
+    fetch(dbUrl + currentUserId)
+    .then(res => res.json())
+    .then(obj => {
+        console.log(obj.likes)
+        obj.likes.forEach(element => {
 
+            const likedDiv = document.createElement("div");
+            const likedImg = document.createElement("img");
+            const likedTitle = document.createElement("h2");
+
+            likedImg.src = element.animeCover;
+            likedTitle.innerText = element.animeTitle;
+
+            //append each items resources to main div
+            getMainDiv.appendChild(likedDiv);
+            likedDiv.appendChild(likedImg);
+            likedDiv.appendChild(likedTitle)
+
+        });
+    })
+    .catch(err => console.log(err));
     
 
     //Create Logic for Displaying your likes stored in db.json

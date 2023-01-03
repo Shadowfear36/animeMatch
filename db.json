@@ -1,38 +1,8 @@
 {
   "users": [
     {
-      "userName": "test",
-      "password": "test",
-      "likes": [
-        "test"
-      ],
-      "id": 1
-    },
-    {
-      "userName": "test",
-      "password": "test",
-      "likes": [],
-      "id": 2
-    },
-    {
-      "userName": "test",
-      "password": "test",
-      "likes": {
-        "animeTitle": "Spy Kyoushitsu",
-        "releaseDate": "2023",
-        "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
-      },
-      "id": 3
-    },
-    {
-      "userName": "login",
-      "password": "test",
-      "likes": [],
-      "id": 4
-    },
-    {
-      "userName": "test",
-      "password": "test",
+      "userName": "Dylan",
+      "password": "123",
       "likes": [
         {
           "animeTitle": "Boruto: Naruto Next Generations",
@@ -50,12 +20,22 @@
           "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
         },
         {
-          "animeTitle": "Tomo-chan wa Onnanoko!",
+          "animeTitle": "Spy Kyoushitsu",
           "releaseDate": "2023",
-          "animeCover": "https://gogocdn.net/cover/tomo-chan-wa-onnanoko-1672333039.png"
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        },
+        {
+          "animeTitle": "Detective Conan",
+          "releaseDate": "1996",
+          "animeCover": "https://gogocdn.net/cover/detective-conan.png"
+        },
+        {
+          "animeTitle": "One Piece",
+          "releaseDate": "1999",
+          "animeCover": "https://gogocdn.net/images/anime/One-piece.jpg"
         }
       ],
-      "id": 5
+      "id": 1
     }
   ]
 }
