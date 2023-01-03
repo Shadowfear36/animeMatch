@@ -7,11 +7,38 @@
             "likes": [
                 {
                     "id": 0,
-                    "bookTitle": "Book Title Example",
-                    "bookAuthor": "Author Example",
-                    "bookCover": "bookUrl.com/cover/example"
+                    "songTitle": "Song Title Example 1",
+                    "songAuthor": "Author Example 1",
+                    "songCover": "SongUrl.com/cover/example"
+                }
+            ]
+        },
+        {   
+            "id": 1,
+            "userName": "testUser2",
+            "password": "123",
+            "likes": [
+                {
+                    "id": 0,
+                    "songTitle": "Song Title Example 1",
+                    "songAuthor": "Author Example 1",
+                    "songCover": "SongUrl.com/cover/example"
+                }
+            ]
+        },
+        {   
+            "id": 1,
+            "userName": "testUser3",
+            "password": "123",
+            "likes": [
+                {
+                    "id": 0,
+                    "songTitle": "Song Title Example 1",
+                    "songAuthor": "Author Example",
+                    "songCover": "SongUrl.com/cover/example"
                 }
             ]
         }
+
     ]
 }

@@ -4,15 +4,15 @@ let currentUser = "testName";
 const getMainDiv = document.querySelector("#main");
 
 function renderApp() {
-    renderLoginPage();
-    // renderSongPage();
+    // renderLoginPage();
+    renderAnimePage();
     // renderViewLikes();
 }
 
 function renderLoginPage() {
         //render logo/text
         const headerText = document.createElement("h1");
-        headerText.textContent = "songMatch";
+        headerText.textContent = "animeMatch";
         headerText.className = "loginHeader";
     
         //create login form
@@ -80,12 +80,15 @@ function renderLoginPage() {
            
             //set current user to current user input value
             currentUser = userName
-            //render the song page
-            renderSongPage();
+            //render the anime page
+            renderAnimePage();
         })
 }
 
-function renderSongPage() {
+function renderAnimePage() {
+    // set Default Index 
+    let index = 1;
+
     // remove html from previous page
     getMainDiv.innerHTML = "";
 
@@ -94,9 +97,9 @@ function renderSongPage() {
     const userH1 = document.createElement("h1");
     const viewLikesBtn = document.createElement("button");
 
-    //songs
-    const songDiv = document.createElement("div");
-    const songImg = document.createElement("img");
+    //Anime
+    const animeDiv = document.createElement("div");
+    const animeCover = document.createElement("img");
     const dislikeBtn = document.createElement("button");
     const likeBtn = document.createElement("button");
 
@@ -109,16 +112,30 @@ function renderSongPage() {
     userH1.innerText = currentUser;
     viewLikesBtn.textContent = "View Likes";
 
-    //<--Songs App -->
-    songDiv.id = "songDiv";
-    songDiv.appendChild(songImg);
-    songDiv.appendChild(dislikeBtn);
-    songDiv.appendChild(likeBtn);
+    //<--Anime App -->
+    animeDiv.id = "animeDiv";
+    animeDiv.appendChild(animeCover);
+    animeDiv.appendChild(dislikeBtn);
+    animeDiv.appendChild(likeBtn);
 
-    //create logic to display songs
+    // Anime App Styles
+    animeDiv.style.display = "block";
+    animeCover.style.display = "block";
 
-    songImg.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
-    songImg.id = "songImg";
+
+
+    //create logic to display Anime
+
+    animeCover.src = "https://m.media-amazon.com/images/I/41gr3r3FSWL._SY346_.jpg";
+    animeCover.id = "animeCover";
+
+    fetch("https://gogoanime.consumet.org/popular")
+    .then((response) => response.json())
+    .then((animelist) => {
+        animeCover.src = animelist[index].animeImg;
+        infoTitle.innerText = animelist[index].animeTitle;
+        animeReleaseDate.innerText = animelist[index].releasedDate
+  });
 
     dislikeBtn.textContent = "Dislike";
     likeBtn.textContent = "Like";
@@ -126,22 +143,39 @@ function renderSongPage() {
     //<---Tool Tips -->
     const toolDiv = document.createElement("div");
     const toolText = document.createElement("h4");
-    toolText.innerHTML = "Click on the Song For Play/Pause";
+    toolText.innerText = "Click On Image For Description";
     toolDiv.id = "toolDiv";
     toolDiv.className = "hidden";
     toolDiv.appendChild(toolText);
     getMainDiv.appendChild(toolDiv);
 
+    //<--Information Display -->
+    const infoDiv = document.createElement("div");
+    const infoTitle = document.createElement('h2');
+    const animeReleaseDate = document.createElement('h3');
+    infoDiv.id = "infoDiv";
+    infoDiv.className = "hidden";
+    infoTitle.innerText = "";
+    animeReleaseDate.innerText = "";
+    infoDiv.appendChild(infoTitle);
+    infoDiv.appendChild(animeReleaseDate);
+    getMainDiv.appendChild(infoDiv);
+
     //<---Event Listeners--->
 
     // on hover of image create tooltip 
-    songImg.addEventListener("mouseover", (e) => {
+    animeCover.addEventListener("mouseover", (e) => {
         toolDiv.classList.toggle("hidden");
         console.log("mouseover");
     })
-    songImg.addEventListener("mouseout", (e) => {
+    animeCover.addEventListener("mouseout", (e) => {
         toolDiv.classList.toggle("hidden");
         console.log("mouseout");
+    })
+    //On Click of Image Cover To Display Details
+    animeCover.addEventListener("click", (e) => {
+        infoDiv.classList.toggle("hidden");
+        console.log("Clicked To See Details");
     })
  
     // like button
@@ -160,8 +194,10 @@ function renderSongPage() {
 
     //append to main div for rendering
     getMainDiv.appendChild(topBar);
-    getMainDiv.appendChild(songDiv);
+    getMainDiv.appendChild(animeDiv);
 }
+
+
 
 function renderViewLikes(){
     // remove html from previous page
@@ -183,7 +219,7 @@ function renderViewLikes(){
     userH1.innerText = currentUser;
     shopBtn.textContent = "Return To Shopping";
 
-    // <---Display Liked Songs-->
+    // <---Display Liked Animes-->
     
 
     //Create Logic for Displaying your likes stored in db.json
@@ -195,7 +231,7 @@ function renderViewLikes(){
     shopBtn.addEventListener("click", (e) => {
         //remove previous pages html
         getMainDiv.innerHTML = "";
-        renderSongPage();
+        renderAnimePage();
     })
 }
 
