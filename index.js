@@ -175,7 +175,6 @@ function renderAnimePage() {
     toolDiv.id = "toolDiv";
     toolDiv.className = "hidden";
     toolDiv.appendChild(toolText);
-    getMainDiv.appendChild(toolDiv);
 
     //<--Information Display -->
     const infoDiv = document.createElement("div");
@@ -187,7 +186,6 @@ function renderAnimePage() {
     animeReleaseDate.innerText = "";
     infoDiv.appendChild(infoTitle);
     infoDiv.appendChild(animeReleaseDate);
-    getMainDiv.appendChild(infoDiv);
 
     //<---Event Listeners--->
 
@@ -253,8 +251,10 @@ function renderAnimePage() {
     })
 
     //append to main div for rendering
+    getMainDiv.appendChild(toolDiv);
     getMainDiv.appendChild(topBar);
     getMainDiv.appendChild(animeDiv);
+    animeDiv.appendChild(infoDiv);
 
       // create fetch function within to withold scope
       function fetchDataByIndex(index) {

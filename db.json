@@ -82,6 +82,641 @@
         }
       ],
       "id": 4
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 5
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 6
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 7
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 8
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 9
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 10
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 11
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 12
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        },
+        {
+          "animeTitle": "Tomo-chan wa Onnanoko!",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/tomo-chan-wa-onnanoko-1672333039.png"
+        }
+      ],
+      "id": 13
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 14
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 15
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 16
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 17
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 18
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 19
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 20
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 21
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 22
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 23
+    },
+    {
+      "userName": "test",
+      "password": "tset",
+      "likes": [],
+      "id": 24
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 25
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 26
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 27
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 28
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 29
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 30
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 31
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 32
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 33
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        },
+        {
+          "animeTitle": "Tomo-chan wa Onnanoko!",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/tomo-chan-wa-onnanoko-1672333039.png"
+        }
+      ],
+      "id": 34
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 35
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 36
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 37
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 38
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 39
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 40
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 41
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 42
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 43
+    },
+    {
+      "userName": "dylan",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 44
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 45
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 46
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 47
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 48
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 49
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 50
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 51
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 52
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 53
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 54
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 55
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 56
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 57
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 58
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 59
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 60
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 61
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 62
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 63
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 64
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 65
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 66
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 67
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 68
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 69
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 70
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 71
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 72
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 73
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 74
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 75
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [],
+      "id": 76
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 77
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 78
     }
   ]
 }
