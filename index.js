@@ -16,9 +16,12 @@ function renderApp() {
 
 function renderLoginPage() {
         //render logo/text
+        const logo = document.createElement("img");
         const headerText = document.createElement("h1");
         headerText.textContent = "animeMatch";
         headerText.className = "loginHeader";
+        logo.id = "logoImage";
+        logo.src = "https://cdn.myanimelist.net/images/characters/12/265641.jpg"
     
         //create login form
         const signUpForm = document.createElement("form");
@@ -26,23 +29,29 @@ function renderLoginPage() {
         const passwordInput = document.createElement("input");
         const loginBtn = document.createElement("button");
         const signUpBtn = document.createElement("button");
+        const formDiv = document.createElement("div");
     
         //append inputs to login form
+        getMainDiv.appendChild(logo);
+        formDiv.appendChild(headerText);
+        formDiv.appendChild(userNameInput);
+        formDiv.appendChild(signUpForm);
         signUpForm.appendChild(userNameInput);
         signUpForm.appendChild(passwordInput);
         signUpForm.appendChild(signUpBtn);
         // signUpForm.appendChild(signUpBtn);
     
         //form styles
-        signUpForm.style.display = "block";
-        signUpBtn.classList.add("centered");
-    
+        // signUpForm.classList.add("signUpForm");
+        // signUpBtn.classList.add("centered");
+        formDiv.classList.add("signUpForm");
+
         //user name input styles
         userNameInput.type = "text";
         userNameInput.placeholder = "Username";
         userNameInput.id = "userNameInput";
         userNameInput.required = true;
-        userNameInput.style.display = "block";
+        // userNameInput.style.display = "block";
         userNameInput.classList.add("centered");
     
         //password input styles
@@ -50,17 +59,15 @@ function renderLoginPage() {
         passwordInput.placeholder = "Password";
         passwordInput.id = "passwordInput";
         passwordInput.required = true;
-        passwordInput.style.display = "block";
+        // passwordInput.style.display = "block";
         passwordInput.classList.add("centered");
     
         //login btn styles
-        // loginBtn.textContent = "Login";
-        // loginBtn.type = "submit";
-        // loginBtn.id = "loginBtn";
-        // loginBtn.name = "formBtn";
-        // loginBtn.value = "Login";
-        // loginBtn.style.display = "block";
-        // loginBtn.classList.add("centered");
+        loginBtn.textContent = "Login";
+        loginBtn.type = "submit";
+        loginBtn.id = "loginBtn";
+        loginBtn.name = "formBtn";
+        loginBtn.value = "Login";
     
         //sign up btn styles
         signUpBtn.textContent = "Sign up";
@@ -68,12 +75,12 @@ function renderLoginPage() {
         signUpBtn.id = "signUpBtn";
         signUpBtn.name = "formBtn";
         signUpBtn.value = "SignUp";
-        signUpBtn.style.display = "block";
+        // signUpBtn.style.display = "block";
         signUpBtn.classList.add("centered");
     
         //append created items to Div
         getMainDiv.appendChild(headerText);
-        getMainDiv.appendChild(signUpForm);
+        getMainDiv.appendChild(formDiv);
     
         //<--EVENT LISTENERS-->
         signUpForm.addEventListener("submit", (e) => {
