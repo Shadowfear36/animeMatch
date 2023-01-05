@@ -3,7 +3,28 @@
     {
       "userName": "TestName",
       "password": "123",
-      "likes": [],
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
       "id": 1
     }
   ]

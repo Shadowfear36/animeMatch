@@ -3,6 +3,8 @@ let currentUser;
 let currentUserId;
 let currentLikesArr;
 let currentAnimeId;
+// set Default Index 
+let index = 1;
 
 const dbUrl = "http://localhost:3000/users/";
 
@@ -121,8 +123,6 @@ function renderLoginPage() {
 }
 
 function renderAnimePage() {
-    // set Default Index 
-    let index = 1;
 
     // remove html from previous page
     getMainDiv.innerHTML = "";
@@ -151,8 +151,8 @@ function renderAnimePage() {
     //<--Anime App -->
     animeDiv.id = "animeDiv";
     animeDiv.appendChild(animeCover);
-    animeDiv.appendChild(dislikeBtn);
     animeDiv.appendChild(likeBtn);
+    animeDiv.appendChild(dislikeBtn);
 
     // Anime App Styles
     animeDiv.style.display = "block";
@@ -167,6 +167,9 @@ function renderAnimePage() {
 
     dislikeBtn.textContent = "Dislike";
     likeBtn.textContent = "Like";
+
+    dislikeBtn.id = "likeBtn";
+    likeBtn.id = "likeBtn";
 
     //<---Tool Tips -->
     const toolDiv = document.createElement("div");
