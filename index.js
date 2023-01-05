@@ -99,6 +99,7 @@ function renderLoginPage() {
                     Accept: "application/json"
                 },
                 body: JSON.stringify({
+                    "index": index,
                     "userName": userName,
                     "password": password,
                     "likes": []
@@ -211,6 +212,7 @@ function renderAnimePage() {
     likeBtn.addEventListener("click", (e) => {
 
         let payLoad = {
+            "index": index,
             "animeTitle": infoTitle.innerText,
             "releaseDate": animeReleaseDate.innerText,
             "animeCover": animeCover.src
@@ -231,6 +233,7 @@ function renderAnimePage() {
                 Accept: "application/json",
             },
             body: JSON.stringify({
+                "index": index,
                 "likes" : currentLikesArr
             })
         })
