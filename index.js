@@ -282,7 +282,7 @@ function renderViewLikes(){
     const likesDiv = document.createElement("div");
 
     // <---Top Bar-->
-    topBar.id = "topBar";
+    topBar.id = "topBarLiked";
     // append to topBar Div 
     topBar.appendChild(userH1);
     topBar.appendChild(shopBtn);
@@ -302,6 +302,7 @@ function renderViewLikes(){
             const likedTitle = document.createElement("h2");
 
             likedImg.src = element.animeCover;
+            likedImg.id = "likedImg"
             likedTitle.innerText = element.animeTitle;
 
             //append each items resources to main div

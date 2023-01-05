@@ -717,6 +717,214 @@
         }
       ],
       "id": 78
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 79
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 80
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 81
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 82
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        },
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        }
+      ],
+      "id": 83
+    },
+    {
+      "userName": "testt",
+      "password": "test",
+      "likes": [],
+      "id": 84
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        }
+      ],
+      "id": 85
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "Spy Kyoushitsu",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/spy-kyoushitsu-1672332673.png"
+        }
+      ],
+      "id": 86
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 87
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 88
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        },
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        }
+      ],
+      "id": 89
+    },
+    {
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        },
+        {
+          "animeTitle": "",
+          "releaseDate": "",
+          "animeCover": "file:///Users/dylanrhinehart/Development/code/Projects/animeMatch/index.html"
+        }
+      ],
+      "id": 90
     }
   ]
 }

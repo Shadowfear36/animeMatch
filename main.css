@@ -45,6 +45,23 @@
     opacity: .5;
 }
 
+#likedImg {
+    width: auto;
+    height: 300px;
+    top: 10%;
+    display: flex;
+    justify-self: center;
+}
+
+#likedImg h2 {
+    text-align: center;
+}
+
+
+#topBarLiked {
+    margin-top: 10px;
+}
+
 #toolDiv h4 {
     color: white;
     opacity: 1;
