@@ -39,6 +39,26 @@
         }
       ],
       "id": 2
+    },
+    {
+      "index": 3,
+      "userName": "test",
+      "password": "test",
+      "likes": [
+        {
+          "index": 1,
+          "animeTitle": "Boruto: Naruto Next Generations",
+          "releaseDate": "2017",
+          "animeCover": "https://gogocdn.net/cover/boruto-naruto-next-generations.png"
+        },
+        {
+          "index": 2,
+          "animeTitle": "NieR:Automata Ver1.1a",
+          "releaseDate": "2023",
+          "animeCover": "https://gogocdn.net/cover/nierautomata-ver1-1a-1672331611.png"
+        }
+      ],
+      "id": 3
     }
   ]
 }
